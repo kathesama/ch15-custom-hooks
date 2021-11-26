@@ -25,7 +25,7 @@
       "version": "detect"
     }
   },
-  "ignorePatterns": ["*.test.js", "*.test.tsx", "*.css"],
+  "ignorePatterns": ["*.test.js", "*.test.tsx", "*.css", "*.svg"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".svg"] }],
     "react/react-in-jsx-scope": "off",
@@ -36,17 +36,12 @@
     "prettier/prettier": ["error", { "endOfLine": "auto"}, { "usePrettierrc": true }],
     "react/jsx-one-expression-per-line": "off",
     "comma-dangle": ["error", {
-      "arrays": "always",
-      "objects": "never",
+      "arrays": "never",
+      "objects": "only-multiline",
       "imports": "never",
       "exports": "never",
       "functions": "never"
     }],
-    "object-curly-newline": ["error", {
-      "ObjectExpression": "always",
-      "ObjectPattern": { "multiline": true },
-      "ImportDeclaration": "never",
-      "ExportDeclaration": { "multiline": true, "minProperties": 3 }
-    }]
+    "object-curly-newline": ["warn"]
   }
 }
